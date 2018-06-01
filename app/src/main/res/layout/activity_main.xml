@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ui.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/llRegisterPhone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:gravity="center|top"
+        android:orientation="vertical"
+        tools:context=".ui.MainActivity">
+
+        <TextView
+            android:id="@+id/textCountryCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/white"
+            android:elevation="2dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            android:textColor="@android:color/background_dark"
+            android:textSize="16sp"
+            tools:text="+91" />
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/phone"
+            android:inputType="phone"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnContinue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:text="@string/btn_continue"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llVerify"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:gravity="center|top"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:context=".ui.MainActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/your_verification_code_expires_in"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textExpireTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            tools:text="2:00" />
+
+        <EditText
+            android:id="@+id/etOtp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/enter_verification_code"
+            android:inputType="numberDecimal"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnVerify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:text="@string/verify"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+</FrameLayout>
